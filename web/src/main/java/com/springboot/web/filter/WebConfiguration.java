@@ -15,19 +15,19 @@ import java.io.IOException;
 public class WebConfiguration {
 
     @Bean
-    public RemoteIpFilter remoteIpFilter(){
+    public RemoteIpFilter remoteIpFilter() {
         return new RemoteIpFilter();
     }
 
     @Bean
-    public FilterRegistrationBean testRegistration(){
+    public FilterRegistrationBean testRegistration() {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(new FirstFilter());
         registration.addUrlPatterns("/*");
-        registration.addInitParameter("paramName","paramValue");
+        registration.addInitParameter("paramName", "paramValue");
         registration.setName("FirstFilter");
         registration.setOrder(1);
-        return  registration;
+        return registration;
     }
 
     public class FirstFilter implements Filter {
@@ -39,10 +39,10 @@ public class WebConfiguration {
 
         @Override
         public void doFilter(ServletRequest seRequest, ServletResponse seResponse, FilterChain chain) throws IOException, ServletException {
-            HttpServletRequest request = (HttpServletRequest)seRequest;
+            HttpServletRequest request = (HttpServletRequest) seRequest;
             System.out.println("url: " + request.getRequestURI());
-            chain.doFilter(seRequest,seResponse);
-            
+            chain.doFilter(seRequest, seResponse);
+
         }
 
         @Override

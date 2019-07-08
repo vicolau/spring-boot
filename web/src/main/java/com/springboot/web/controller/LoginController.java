@@ -4,19 +4,11 @@ import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpSession;
 import java.util.Map;
 
-/**
- * @author LinMingShi
- * @version V1.0
- * @Title: LoginController
- * @ProjectName springboot
- * @Description: TODO
- * @date 2019/7/5 10:58
- */
+
 
 @Controller
 public class LoginController {

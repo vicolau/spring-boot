@@ -1,15 +1,6 @@
 package com.springboot.web.component;
 
-/**
- * @author LinMingShi
- * @version V1.0
- * @Title: MyLocaleResolver
- * @ProjectName springboot
- * @Description: TODO
- * @date 2019/7/5 9:51
- */
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.LocaleResolver;
 import org.thymeleaf.util.StringUtils;
 

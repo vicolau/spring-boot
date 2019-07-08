@@ -2,7 +2,6 @@ package com.springboot.web.config;
 
 import com.springboot.web.component.LoginHandlerInterceptor;
 import com.springboot.web.component.MyLocaleResolver;
-import org.apache.tomcat.util.descriptor.LocalResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -10,14 +9,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
- * @author LinMingShi
- * @version V1.0
- * @Title: MyMvcConfig
- * @ProjectName springboot
- * @Description: TODO
- * @date 2019/7/3 17:22
- */
+
 
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {

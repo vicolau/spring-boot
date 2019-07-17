@@ -23,7 +23,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
         //浏览器发送 /vico 请求 也来到success页面
         registry.addViewController("/vico").setViewName("success");
-        registry.addViewController("/main.html").setViewName("test");
+        registry.addViewController("/main.html").setViewName("dashboard");
     }
 
     /**
@@ -33,9 +33,9 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // excludeUrl 白名单
-        String[] excludeUrl = new String[]{"/","/index.html","/user/login","/asserts/**","/webjars/**"};
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns(excludeUrl);
+//        String[] excludeUrl = new String[]{"/","/index.html","/user/login","/asserts/**","/webjars/**"};
+//        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+//                .excludePathPatterns(excludeUrl);
     }
 
     /**

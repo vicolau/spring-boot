@@ -32,10 +32,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // excludeUrl 白名单
-//        String[] excludeUrl = new String[]{"/","/index.html","/user/login","/asserts/**","/webjars/**"};
-//        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-//                .excludePathPatterns(excludeUrl);
+        //   excludeUrl 白名单 whitelist
+        String[] excludeUrl = new String[]{"/","/index.html","/user/login","/asserts/**","/webjars/**"};
+        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+                .excludePathPatterns(excludeUrl);
     }
 
     /**
